@@ -1,0 +1,40 @@
+-- Planejamento
+
+Entidades:
+- usuário x tarefas
+- usuário hasMany tarefas 1:N
+
+- usuario x categoria
+- usuario hasMany categorias 1:N
+
+- tarefa x usuário
+- tarefa belongsTo usuario N:1
+
+- tarefa x categoria
+- tarefa belongsTo categoria N:1
+
+- categorias x usuario
+- categoria belongsTo usuario N:1
+
+- categorias x tarefas
+- categoria hasMany tasks 1:N
+
+
+-- Migrations --
+
+Usuario: (users)
+- padrão laravel
+
+Tarefa: (tasks)
+- id
+- titulo
+- data
+- descrição
+- categoria_id 
+- usuario_id
+
+Categoria: (categories)
+- id
+- nome
+- cor (hexadecimal)
+- usuario_id
